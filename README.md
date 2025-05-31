@@ -6,9 +6,14 @@ conda activate doctoral
 pip install -r requirements.txt
 ```
 
+```bash
+uvicorn serve_hospital_records:app --reload --host 0.0.0.0 --port 8000
+````
+
 #### API documentation 
 
 http://localhost:8000/docs#/
+
 
 #### EndPoints
 
