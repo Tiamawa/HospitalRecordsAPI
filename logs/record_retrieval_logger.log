@@ -52,3 +52,9 @@
 2025-05-31 19:54:42,841 [INFO] Request ID=ae064c40-e909-4b37-aff8-34179cf1fdcd - Completed request: POST http://localhost:8000/get_record_with_cni_admission_time Status code=200 - Process time=0.0065s
 2025-05-31 19:58:37,018 [INFO] Request ID=92f78c74-ee2d-48db-8ec1-3486a631e7b0 - Start request: POST http://localhost:8000/token
 2025-05-31 19:58:37,278 [INFO] Request ID=92f78c74-ee2d-48db-8ec1-3486a631e7b0 - Completed request: POST http://localhost:8000/token Status code=200 - Process time=0.2592s
+2025-06-29 13:42:30,942 [INFO] Request ID=15592385-7ec8-4e7e-a67b-47061324c3c3 - Start request: GET http://localhost:8000/
+2025-06-29 13:42:30,943 [INFO] Request ID=15592385-7ec8-4e7e-a67b-47061324c3c3 - Completed request: GET http://localhost:8000/ Status code=404 - Process time=0.0005s
+2025-06-29 13:42:35,501 [INFO] Request ID=d95537f9-e8bf-4fa0-9d5d-602129de697f - Start request: GET http://localhost:8000/docs
+2025-06-29 13:42:35,505 [INFO] Request ID=d95537f9-e8bf-4fa0-9d5d-602129de697f - Completed request: GET http://localhost:8000/docs Status code=200 - Process time=0.0032s
+2025-06-29 13:42:35,868 [INFO] Request ID=76596a68-9515-4d41-9018-a27f00f6d0f2 - Start request: GET http://localhost:8000/openapi.json
+2025-06-29 13:42:35,876 [INFO] Request ID=76596a68-9515-4d41-9018-a27f00f6d0f2 - Completed request: GET http://localhost:8000/openapi.json Status code=200 - Process time=0.0078s

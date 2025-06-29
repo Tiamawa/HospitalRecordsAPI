@@ -1,19 +1,65 @@
+# FastAPI Hospital Records
 
-#### Commands to launch the api
+This project is a FastAPI application designed to manage hospital records, including victim information related to crashes. It provides a RESTful API for interacting with the data.
+
+## Project Structure
+
+- `serve_hospital_records.py`: Contains the FastAPI application code, defining API endpoints, data models, and integrating authentication and database query utilities.
+- `requirements.txt`: Lists the Python dependencies required for the FastAPI application to run.
+- `Dockerfile`: Instructions to build a Docker image for the FastAPI application.
+- `README.md`: Documentation for the project.
+
+## Setup Instructions
+
+1. **Clone the repository:**
+   ```
+   git clone <repository-url>
+   cd fastapi-hospital-records
+   ```
+
+2. **Create a virtual environment (optional but recommended):**
 ```bash
+conda deactivate
 conda create --name doctoral python=3.10
 conda activate doctoral
-pip install -r requirements.txt
+
 ```
 
-```bash
-uvicorn serve_hospital_records:app --reload --host 0.0.0.0 --port 8000
-````
+3. **Install dependencies:**
+   ```
+   pip install -r requirements.txt
+   ```
 
-#### API documentation 
+4. **Run the application:**
+  ```bash
+  uvicorn serve_hospital_records:app --reload --host 0.0.0.0 --port 8000
+  ```
 
-http://localhost:8000/docs#/
+## Usage
 
+Once the application is running, you can access the API at `http://127.0.0.1:8000`. The API documentation is available at `http://127.0.0.1:8000/docs`.
+
+## Docker Instructions
+
+To build and run the Docker container, use the following commands:
+
+1. **Build the Docker image:**
+   ```
+   docker build -t fastapi-hospital-records .
+   ```
+
+2. **Run the Docker container:**
+   ```
+   docker run -d --name hospital-records -p 8000:8000 -v ./logs:/app/logs fastapi-hospital-records
+   ```
+
+3. Use of .env 
+Below informations must be present on you .env file : 
+
+- HOSPITAL_RECORD_LOGGER="/app/logs/record_retrieval_logger.log"
+- SERVING_SECRET_KEY="your_key_here"
+- SERVING_ALGORITHM="algo_"
+- SERVING_ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 #### EndPoints
 
@@ -80,3 +126,11 @@ curl -X 'POST' \
     "finalStatus": "recovered"
   }
 ]
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
